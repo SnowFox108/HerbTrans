@@ -44,12 +44,15 @@
     <Compile Include="Files\DayRateParser.cs" />
     <Compile Include="Files\DayRateReader.cs" />
     <Compile Include="Files\FileHelper.cs" />
+    <Compile Include="Files\HerbProcessParser.cs" />
+    <Compile Include="Files\HerbProcessReader.cs" />
     <Compile Include="Files\ICsvReader.cs" />
     <Compile Include="Files\IParser.cs" />
     <Compile Include="Files\PriceParser.cs" />
     <Compile Include="Files\PriceReader.cs" />
     <Compile Include="Models\CategoryRate.cs" />
     <Compile Include="Models\DayRate.cs" />
+    <Compile Include="Models\FileProcess.cs" />
     <Compile Include="Models\OutputPrice.cs" />
     <Compile Include="Models\Price.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

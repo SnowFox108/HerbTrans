@@ -12,8 +12,8 @@ namespace HerbTrans.Infrastructure.Files
             var dayRate = new DayRate()
             {
                 Id = int.Parse(items[0]),
-                DailyTotal = decimal.Parse(items[1]),
-                Date = DateTime.Parse(items[2]),
+                Date = DateTime.Parse(items[1]),
+                DailyTotal = decimal.Parse(items[2]),
                 Rates = new[]
                 {
                     new CategoryRate()

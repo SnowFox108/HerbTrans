@@ -10,7 +10,8 @@ namespace HerbTrans.Client
     {
         static void Main(string[] args)
         {
-            new FileReadTest();
+
+            new HerbTransProgram();
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
         }
