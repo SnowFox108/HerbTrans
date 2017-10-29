@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Enums\ProductCategory.cs" />
     <Compile Include="Files\DayRateParser.cs" />
     <Compile Include="Files\DayRateReader.cs" />
@@ -51,6 +50,7 @@
     <Compile Include="Files\PriceReader.cs" />
     <Compile Include="Models\CategoryRate.cs" />
     <Compile Include="Models\DayRate.cs" />
+    <Compile Include="Models\OutputPrice.cs" />
     <Compile Include="Models\Price.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
