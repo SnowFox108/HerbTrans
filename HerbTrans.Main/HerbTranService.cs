@@ -1,6 +1,8 @@
-﻿using Castle.Core.Logging;
+﻿using System.Collections.Generic;
+using Castle.Core.Logging;
 using HerbTrans.Infrastructure.Files;
 using HerbTrans.Infrastructure.Models;
+using HerbTrans.PricePicker;
 
 namespace HerbTrans.Main
 {
@@ -11,19 +13,22 @@ namespace HerbTrans.Main
         private readonly ICsvReader<FileProcess> _fileReader;
         private readonly ICsvReader<Price> _priceReader;
         private readonly ICsvReader<DayRate> _dayRateReader;
+        private readonly IDistributor _distributor;
 
         public HerbTranService(
             string path,
             ILogger logger, 
             ICsvReader<FileProcess> fileReader, 
             ICsvReader<Price> priceReader, 
-            ICsvReader<DayRate> dayRateReader)
+            ICsvReader<DayRate> dayRateReader, 
+            IDistributor distributor)
         {
             _path = path;
             _logger = logger;
             _fileReader = fileReader;
             _priceReader = priceReader;
             _dayRateReader = dayRateReader;
+            _distributor = distributor;
         }
 
 
@@ -35,6 +40,13 @@ namespace HerbTrans.Main
                 _logger.InfoFormat($"Processing DayRate: {file.DayRateFile} with Price: {file.PriceFile}.");
                 var prices = _priceReader.FileReader(file.PriceFile);
                 var dayRates = _dayRateReader.FileReader(file.DayRateFile);
+
+                var salesRecords = new List<SalesRecord>();
+                foreach (var dayRate in dayRates)
+                {
+                    var salesRecord = _distributor.PriceBuilder(dayRate, prices);
+                    salesRecords.Add(salesRecord);
+                }
             }
         }
     }

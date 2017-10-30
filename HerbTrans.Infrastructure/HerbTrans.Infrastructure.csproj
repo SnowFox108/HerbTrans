@@ -50,12 +50,16 @@
     <Compile Include="Files\IParser.cs" />
     <Compile Include="Files\PriceParser.cs" />
     <Compile Include="Files\PriceReader.cs" />
+    <Compile Include="Models\SalesRecord.cs" />
     <Compile Include="Models\CategoryRate.cs" />
     <Compile Include="Models\DayRate.cs" />
     <Compile Include="Models\FileProcess.cs" />
     <Compile Include="Models\OutputPrice.cs" />
     <Compile Include="Models\Price.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Extensions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

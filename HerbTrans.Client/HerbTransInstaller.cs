@@ -1,11 +1,13 @@
 ﻿using System.Configuration;
 using Castle.Facilities.Logging;
 using Castle.MicroKernel.Registration;
+using Castle.MicroKernel.Resolvers.SpecializedResolvers;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
 using HerbTrans.Infrastructure.Files;
 using HerbTrans.Infrastructure.Models;
 using HerbTrans.Main;
+using HerbTrans.PricePicker;
 
 namespace HerbTrans.Client
 {
@@ -14,6 +16,7 @@ namespace HerbTrans.Client
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
             container.AddFacility<LoggingFacility>(f => f.LogUsing(LoggerImplementation.ExtendedNLog).WithAppConfig());
+            container.Kernel.Resolver.AddSubResolver(new ArrayResolver(container.Kernel, true));
 
             container.Register(
 
@@ -25,10 +28,17 @@ namespace HerbTrans.Client
                 Component.For<ICsvReader<FileProcess>>().ImplementedBy<HerbProcessReader>(),
                 Component.For<IFileHelper>().ImplementedBy<FileHelper>(),
 
-                Component.For<IHerbTranService>().ImplementedBy<HerbTranService>()
-                    .DependsOn(new { path = ConfigurationManager.AppSettings["ProcessFilePath"] })
+                Component.For<ICategoryPicker>().ImplementedBy<BeautyCategoryPicker>().Named("BeautyCategoryPicker"),
+                Component.For<ICategoryPicker>().ImplementedBy<HerbCategoryPicker>().Named("HerbCategoryPicker"),
+                Component.For<ICategoryPicker>().ImplementedBy<MedicineCategoryPicker>().Named("MedicineCategoryPicker"),
+                Component.For<ICategoryPicker>().ImplementedBy<FreeCategoryPicker>().Named("FreeCategoryPicker"),
 
-                );
+                Component.For<IHerbTranService>().ImplementedBy<HerbTranService>()
+                    .DependsOn(new {path = ConfigurationManager.AppSettings["ProcessFilePath"]}),
+
+                Component.For<IDistributor>().ImplementedBy<Distributor>()
+
+            );
         }
     }
 }

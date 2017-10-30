@@ -4,6 +4,7 @@
     {
         Beauty = 1,
         Herb = 2,
-        Medicine = 3
+        Medicine = 3,
+        FreeConsultant = 4,
     }
 }

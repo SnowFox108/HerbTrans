@@ -10,10 +10,11 @@ namespace HerbTrans.Infrastructure.Files
             var items = data.Split(',');
             var price = new Price()
             {
-                Service = items[0],
-                UnitPrice = decimal.Parse(items[1]),
-                Category = (ProductCategory)int.Parse(items[2]),
-                ShowRate = int.Parse(items[3])
+                Id = int.Parse(items[0]),
+                Service = items[1],
+                UnitPrice = decimal.Parse(items[2]),
+                Category = (ProductCategory)int.Parse(items[3]),
+                ShowRate = int.Parse(items[4])
             };
             return price;
         }

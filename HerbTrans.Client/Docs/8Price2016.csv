@@ -1,36 +1,36 @@
-﻿consultation,0.00,1,50
-acupuncture,35.00,1,70
-acupuncture,45.00,1,70
-acupuncture+acupressure+cupping,45.00,1,70
-acupuncture+acupressure+cupping,55.00,1,75
-cupping therapy,15.00,1,50
-ear candling,12.00,1,50
-head/shoulder massage,10.00,1,50
-swedish/thai yoga 30,25.00,1,60
-swedish/thai yoga 45,33.00,1,70
-swedish/thai yoga 60,39.00,1,75
-swedish/thai yoga 90,60.00,1,70
-swedish/thai yoga 120,70.00,1,40
-sports/deep tissue/Chinese tuina 30,27.00,1,50
-sports/deep tissue/Chinese tuina 45,35.00,1,50
-sports/deep tissue/Chinese tuina 60,42.00,1,75
-sports/deep tissue/Chinese tuina 90,65.00,1,50
-hot stone/aroma therapy /pregnancy 60,45.00,1,25
-reflexology 30,25.00,1,35
-reflexology 45,33.00,1,35
-reflexology 60,39.00,1,50
-allergy test standard 150,39.00,1,5
-allergy test digestion 300,49.00,1,10
-allergy test comprehensive 500,79.00,1,10
-Herbal Powder x 1 week,42.00,2,50
-Herbal Powder x 4 week,168.00,2,70
-Herbal Powder x 6 week,252.00,2,60
-Herbal Powder x 7 week,275.00,2,50
-Premium Herbal Powder x1 week,110.00,2,70
-Premium Herbal Powder x2 week,220.00,2,70
-Premium Herbal Powder x4 week,440.00,2,70
-Herbal Med 1,10.00,3,10
-Herbal Med 2,12.00,3,10
-Massage oil,18.00,3,10
-wood lock oil ,20.00,3,10
-Herbal Patch,2.00,3,10
+﻿1,consultation,0,4,50
+2,acupuncture,35,1,70
+3,acupuncture,45,1,70
+4,acupuncture+acupressure+cupping,45,1,70
+5,acupuncture+acupressure+cupping,55,1,75
+6,cupping therapy,15,1,50
+7,ear candling,12,1,50
+8,head/shoulder massage,10,1,50
+9,swedish/thai yoga 30,25,1,60
+10,swedish/thai yoga 45,33,1,70
+11,swedish/thai yoga 60,39,1,75
+12,swedish/thai yoga 90,60,1,70
+13,swedish/thai yoga 120,70,1,40
+14,sports/deep tissue/Chinese tuina 30,27,1,50
+15,sports/deep tissue/Chinese tuina 45,35,1,50
+16,sports/deep tissue/Chinese tuina 60,42,1,75
+17,sports/deep tissue/Chinese tuina 90,65,1,50
+18,hot stone/aroma therapy /pregnancy 60,45,1,25
+19,reflexology 30,25,1,35
+20,reflexology 45,33,1,35
+21,reflexology 60,39,1,50
+22,allergy test standard 150,39,1,5
+23,allergy test digestion 300,49,1,10
+24,allergy test comprehensive 500,79,1,10
+25,Herbal Powder x 1 week,42,2,50
+26,Herbal Powder x 4 week,168,2,70
+27,Herbal Powder x 6 week,252,2,60
+28,Herbal Powder x 7 week,275,2,50
+29,Premium Herbal Powder x1 week,110,2,70
+30,Premium Herbal Powder x2 week,220,2,70
+31,Premium Herbal Powder x4 week,440,2,70
+32,Herbal Med 1,10,3,10
+33,Herbal Med 2,12,3,10
+34,Massage oil,18,3,10
+35,wood lock oil ,20,3,10
+36,Herbal Patch,2,3,10

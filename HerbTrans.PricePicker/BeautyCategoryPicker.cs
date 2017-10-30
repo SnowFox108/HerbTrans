@@ -1,0 +1,59 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Castle.Core.Logging;
+using HerbTrans.Infrastructure.Enums;
+using HerbTrans.Infrastructure.Models;
+
+namespace HerbTrans.PricePicker
+{
+    public class BeautyCategoryPicker : ICategoryPicker
+    {
+        public ProductCategory Category => ProductCategory.Beauty;
+        private readonly ILogger _logger;
+
+        public BeautyCategoryPicker(ILogger logger)
+        {
+            _logger = logger;
+        }
+
+        public decimal Build(SalesRecord salesRecord, IEnumerable<Price> prices, decimal subTotal, int batchId)
+        {
+
+            var rand = new Random(DateTime.Now.Millisecond);
+            var remaining = subTotal;
+            var subPrices = prices.Where(p => p.Category == Category).ToArray();
+
+            var totalChance = subPrices.Sum(p => p.ShowRate);
+
+            while (remaining > 0)
+            {
+                var picker = rand.Next(0, totalChance);
+                var pointer = 0;
+                for (int i = 0; i < subPrices.Length; i++)
+                {
+                    pointer += subPrices[i].ShowRate;
+                    if (picker < pointer)
+                    {
+                        var item = subPrices[i];
+                        if (item.UnitPrice > remaining)
+                            return remaining;
+                        salesRecord.AddPrice(new OutputPrice()
+                        {
+                            BatchId = batchId,
+                            Service = item.Service,
+                            UnitPrice = item.UnitPrice,
+                            Category = item.Category
+                        });
+                        remaining -= item.UnitPrice;
+                        _logger.Info(
+                            $"picker: {picker} Picked item: {item.Service} price: {item.UnitPrice} remaining: {remaining}");
+                        break;
+                    }
+                }
+            }
+
+            return remaining;
+        }
+    }
+}
