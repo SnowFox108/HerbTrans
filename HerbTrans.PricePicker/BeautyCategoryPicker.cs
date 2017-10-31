@@ -17,7 +17,7 @@ namespace HerbTrans.PricePicker
             _logger = logger;
         }
 
-        public decimal Build(SalesRecord salesRecord, IEnumerable<Price> prices, decimal subTotal, int batchId)
+        public void Build(SalesRecord salesRecord, IEnumerable<Price> prices, decimal subTotal, int batchId)
         {
 
             var rand = new Random(DateTime.Now.Millisecond);
@@ -37,13 +37,16 @@ namespace HerbTrans.PricePicker
                     {
                         var item = subPrices[i];
                         if (item.UnitPrice > remaining)
-                            return remaining;
+                            return;
                         salesRecord.AddPrice(new OutputPrice()
                         {
                             BatchId = batchId,
+                            ProductId = item.Id,
                             Service = item.Service,
                             UnitPrice = item.UnitPrice,
-                            Category = item.Category
+                            Category = item.Category,
+                            Quantity = 1,
+                            Discount = 0
                         });
                         remaining -= item.UnitPrice;
                         _logger.Info(
@@ -52,8 +55,6 @@ namespace HerbTrans.PricePicker
                     }
                 }
             }
-
-            return remaining;
         }
     }
 }

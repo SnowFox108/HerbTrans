@@ -5,5 +5,6 @@
         public string DayRateFile { get; set; }
         public string PriceFile { get; set; }
         public string OutputFile { get; set; }
+        public bool HasFreeConsultant { get; set; }
     }
 }

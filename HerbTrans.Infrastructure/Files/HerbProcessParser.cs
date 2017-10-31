@@ -11,7 +11,8 @@ namespace HerbTrans.Infrastructure.Files
             {
                 PriceFile = items[0],
                 DayRateFile = items[1],
-                OutputFile = items[2]
+                OutputFile = items[2],
+                HasFreeConsultant = bool.Parse(items[3])
             };
             return process;
         }

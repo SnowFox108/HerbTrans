@@ -56,8 +56,10 @@
     <Compile Include="HerbCategoryPicker.cs" />
     <Compile Include="ICategoryPicker.cs" />
     <Compile Include="IDistributor.cs" />
+    <Compile Include="IRemainingPicker.cs" />
     <Compile Include="MedicineCategoryPicker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemainingPicker.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HerbTrans.Infrastructure\HerbTrans.Infrastructure.csproj">

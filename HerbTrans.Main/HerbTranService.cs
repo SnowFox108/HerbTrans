@@ -37,14 +37,14 @@ namespace HerbTrans.Main
             var processFiles = _fileReader.FileReader(_path);
             foreach (var file in processFiles)
             {
-                _logger.InfoFormat($"Processing DayRate: {file.DayRateFile} with Price: {file.PriceFile}.");
+                _logger.InfoFormat($"Processing DayRate: {file.DayRateFile} with Price: {file.PriceFile}. Has Free Consultant: {file.HasFreeConsultant}");
                 var prices = _priceReader.FileReader(file.PriceFile);
                 var dayRates = _dayRateReader.FileReader(file.DayRateFile);
 
                 var salesRecords = new List<SalesRecord>();
                 foreach (var dayRate in dayRates)
                 {
-                    var salesRecord = _distributor.PriceBuilder(dayRate, prices);
+                    var salesRecord = _distributor.PriceBuilder(dayRate, prices, file.HasFreeConsultant);
                     salesRecords.Add(salesRecord);
                 }
             }

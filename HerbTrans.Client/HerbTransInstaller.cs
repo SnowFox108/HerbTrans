@@ -32,6 +32,8 @@ namespace HerbTrans.Client
                 Component.For<ICategoryPicker>().ImplementedBy<HerbCategoryPicker>().Named("HerbCategoryPicker"),
                 Component.For<ICategoryPicker>().ImplementedBy<MedicineCategoryPicker>().Named("MedicineCategoryPicker"),
                 Component.For<ICategoryPicker>().ImplementedBy<FreeCategoryPicker>().Named("FreeCategoryPicker"),
+                
+                Component.For<IRemainingPicker>().ImplementedBy<RemainingPicker>(),
 
                 Component.For<IHerbTranService>().ImplementedBy<HerbTranService>()
                     .DependsOn(new {path = ConfigurationManager.AppSettings["ProcessFilePath"]}),

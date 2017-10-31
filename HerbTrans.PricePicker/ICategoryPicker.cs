@@ -7,6 +7,6 @@ namespace HerbTrans.PricePicker
     public interface ICategoryPicker
     {
         ProductCategory Category { get; }
-        decimal Build(SalesRecord salesRecord, IEnumerable<Price> prices, decimal subTotal, int batchId);
+        void Build(SalesRecord salesRecord, IEnumerable<Price> prices, decimal subTotal, int batchId);
     }
 }
