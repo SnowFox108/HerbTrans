@@ -37,6 +37,7 @@ namespace HerbTrans.Client
 
                 Component.For<IHerbTranService>().ImplementedBy<HerbTranService>()
                     .DependsOn(new {path = ConfigurationManager.AppSettings["ProcessFilePath"]}),
+                Component.For<IOutputService>().ImplementedBy<OutputService>(),
 
                 Component.For<IDistributor>().ImplementedBy<Distributor>()
 

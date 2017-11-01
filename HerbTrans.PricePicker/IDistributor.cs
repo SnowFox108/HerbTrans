@@ -5,6 +5,6 @@ namespace HerbTrans.PricePicker
 {
     public interface IDistributor
     {
-        SalesRecord PriceBuilder(DayRate dayRate, IEnumerable<Price> prices, bool hasFreeConsultant);
+        DailyRecord PriceBuilder(DayRate dayRate, IEnumerable<Price> prices, bool hasFreeConsultant);
     }
 }

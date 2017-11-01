@@ -52,6 +52,8 @@
   <ItemGroup>
     <Compile Include="HerbTranService.cs" />
     <Compile Include="IHerbTranService.cs" />
+    <Compile Include="IOutputService.cs" />
+    <Compile Include="OutputService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

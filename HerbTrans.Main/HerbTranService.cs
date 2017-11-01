@@ -14,6 +14,7 @@ namespace HerbTrans.Main
         private readonly ICsvReader<Price> _priceReader;
         private readonly ICsvReader<DayRate> _dayRateReader;
         private readonly IDistributor _distributor;
+        private readonly IOutputService _outputService;
 
         public HerbTranService(
             string path,
@@ -21,7 +22,8 @@ namespace HerbTrans.Main
             ICsvReader<FileProcess> fileReader, 
             ICsvReader<Price> priceReader, 
             ICsvReader<DayRate> dayRateReader, 
-            IDistributor distributor)
+            IDistributor distributor, 
+            IOutputService outputService)
         {
             _path = path;
             _logger = logger;
@@ -29,6 +31,7 @@ namespace HerbTrans.Main
             _priceReader = priceReader;
             _dayRateReader = dayRateReader;
             _distributor = distributor;
+            _outputService = outputService;
         }
 
 
@@ -41,12 +44,15 @@ namespace HerbTrans.Main
                 var prices = _priceReader.FileReader(file.PriceFile);
                 var dayRates = _dayRateReader.FileReader(file.DayRateFile);
 
-                var salesRecords = new List<SalesRecord>();
+                var dailyRecords = new List<DailyRecord>();
                 foreach (var dayRate in dayRates)
                 {
                     var salesRecord = _distributor.PriceBuilder(dayRate, prices, file.HasFreeConsultant);
-                    salesRecords.Add(salesRecord);
+                    dailyRecords.Add(salesRecord);
                 }
+
+                _logger.InfoFormat($"Processing DayRate to OutputFile: {file.OutputFile}");
+                _outputService.WriteToFile(dailyRecords, file.OutputFile);
             }
         }
     }

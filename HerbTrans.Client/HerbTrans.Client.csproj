@@ -73,6 +73,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Docs\8DayRates2016_Sample.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Docs\8DayRatesCard2016_Sample.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
