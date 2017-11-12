@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using HerbTrans.Infrastructure.Enums;
 using HerbTrans.Infrastructure.Files;
 using HerbTrans.Infrastructure.Models;
 
@@ -31,21 +32,30 @@ namespace HerbTrans.Main
                     var picker = rand.Next(0, totalChance);
                     if (picker < dailyRecord.Card.Prices.Count && card.Count > 0)
                     {
-                        stringBuilder.AppendLine(GetOutputString(dailyRecord.Card.Date, card.Dequeue(), "Card"));
+                        stringBuilder.AppendLine(GetOutputString(dailyRecord.Card.Date, card.Dequeue(), OutputType.Card));
                     }
                     else
                     {
                         if (cash.Count > 0)
-                            stringBuilder.AppendLine(GetOutputString(dailyRecord.Cash.Date, cash.Dequeue(), "Cash"));
+                            stringBuilder.AppendLine(GetOutputString(dailyRecord.Cash.Date, cash.Dequeue(), OutputType.Cash));
                     }
                 }
             }
             _fileHelper.WriteTextToFile(file, stringBuilder.ToString());
         }
 
-        private string GetOutputString(DateTime date, OutputPrice outputPrice, string payment)
+        private string GetOutputString(DateTime date, OutputPrice outputPrice, OutputType outputType)
         {
-            return $"{date.ToShortDateString()},{payment},{outputPrice.Service},{outputPrice.UnitPrice}";
+            if (outputType == OutputType.Card)
+                return
+                    $"{date.ToShortDateString()},{outputPrice.Service},{outputPrice.UnitPrice},,{outputType.ToString()}";
+
+            if (outputType == OutputType.Cash)
+                return
+                    $"{date.ToShortDateString()},{outputPrice.Service},,{outputPrice.UnitPrice},{outputType.ToString()}";
+
+            throw new Exception($"OutputType: {outputType.ToString()} does not exist.");
+
         }
     }
 }

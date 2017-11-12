@@ -1,0 +1,126 @@
+﻿1,Half arms strip wax,12.00,1,80
+2,3/4 arms strip wax,15.00,1,40
+3,full arms strip wax,17.00,1,60
+4,Lower half legs strip wax,15.00,1,80
+5,upper half legs strip wax,17.00,1,50
+6,3/4 legs strip wax,22.00,1,50
+7,full legs strip,25.00,1,10
+8,nipple strip wax,7.00,1,20
+9,shoulders strip wax,10.00,1,40
+10,stomach strip wax,10.00,1,20
+11,bottom strip wax,12.00,1,40
+12,chest strip wax,17.00,1,20
+13,lower back strip wax,12.00,1,50
+14,upper back strip wax,17.00,1,20
+15,full back strip wax,20.00,1,20
+16,full body waxing,75.00,1,0
+17,under arms waxing,10.00,1,90
+18,bikini waxing ,13.00,1,90
+19,high bikini waxing,15.00,1,90
+20,brazilian waxing,24.00,1,30
+21,hollywood waxing,25.00,1,30
+22,under arms hot waxing ,12.00,1,80
+23,bikini hot waxing,15.00,1,80
+24,high bikini hot waxing ,20.00,1,50
+25,brazilian hot waxing ,25.00,1,40
+26,hollywood hot waxing,29.00,1,30
+27,under arms lycon waxing ,15.00,1,30
+28,bikini lycon waxing ,20.00,1,70
+29,high bikini lycon waxing ,25.00,1,40
+30,brazilian lycon waxing,30.00,1,30
+31,hollywood lycon waxing,35.00,1,20
+32,micro-dermobration,49.00,1,0
+33,dermobration+massage(60mins+20mins),65.00,1,0
+34,full face waxing,24.00,1,15
+35,full face Lycon waxing,35.00,1,10
+36,full face & Neck ,30.00,1,15
+37,salt & oil scrub ,26.00,1,5
+38,ingrow treatment,30.00,1,5
+39,body scrub ,57.00,1,0
+40,eyebrow Tinting,7.00,1,70
+41,eyeless tinting,12.00,1,30
+42,eyebrows & eyelashes tinting,17.00,1,30
+43,individual cluster lashes,25.00,1,15
+44,nouveau lash extensions,55.00,1,10
+45,nouveau extension infill ,30.00,1,15
+46,nouveau extension removal,12.00,1,15
+47,eyebrows waxing,6.00,1,65
+48,upper lip waxing,5.00,1,65
+49,chin waxing,4.00,1,40
+50,nose waxing,4.00,1,30
+51,forehead waxing,6.00,1,50
+52,cheeks waxing,4.00,1,50
+53,sides waxing,7.00,1,50
+54,neck waxing,8.00,1,30
+55,eyebrow shaping,5.00,1,80
+56,upper lip threading,4.00,1,70
+57,chin threading,4.00,1,70
+58,nose threading,4.00,1,40
+59,forehead threading,6.00,1,40
+60,cheeks threading,4.00,1,30
+61,sides threading,7.00,1,40
+62,neck threading,7.00,1,40
+63,full face threading,24.00,1,20
+64,full face & neck threading,29.00,1,20
+65,express facial ,30.00,1,40
+66,chromawhite brightening facial ,50.00,1,20
+67,deep cleansing - normal skin,50.00,1,20
+68,environmentally-sensitised skin ,50.00,1,20
+69,age smart- (anti-ageing) facial,50.00,1,10
+70,medibac clearing facial,50.00,1,10
+71,manicure,12.00,1,80
+72,pedicure,23.00,1,60
+73,manicure & pedicure,32.00,1,40
+74,polish chang hand ,6.00,1,60
+75,polish chang toes,8.00,1,60
+76,luxury manicure,19.00,1,15
+77,luxury pedicure,33.00,1,15
+78,shellac manicure,25.00,1,40
+79,shellac pedicure,40.00,1,15
+80,shellac soak off ,5.00,1,50
+81,full set hand acrylic,20.00,1,50
+82,full set toes acrylic,25.00,1,20
+83,refill hands/toes acrylic,15.00,1,20
+84,take off only acrylic,10.00,1,20
+85,2 Big toes acrylic,15.00,1,20
+86,nail repair acrylic,3.00,1,20
+87,nai art,3.00,1,10
+88,full set hand gel,27.00,1,10
+89,full set toes gel,30.00,1,10
+90,refill hands/toes gel,17.00,1,10
+91,take off only  gel,10.00,1,10
+92,2 Big toes gel,15.00,1,10
+93,thai massage 30,30.00,1,40
+94,thai massage 45,40.00,1,20
+95,thai massage 60,49.00,1,20
+96,thai massage 90,75.00,1,0
+97,thai massage 120,100.00,1,0
+98,hot stone massage 60,60.00,1,5
+99,hot stone massage 90,75.00,1,0
+100,aroma therapy 60,55.00,1,20
+101,aroma therapy 45,45.00,1,60
+102,reflexology 30,30.00,1,20
+103,reflexology 45,40.00,1,30
+104,reflexology 60,49.00,1,20
+105,Herbal Powder x 1 week,49.00,2,50
+106,Herbal Powder x 4 week,196.00,2,70
+107,Herbal Powder x 6 week,294.00,2,60
+108,Herbal Powder x 8 week,392.00,2,50
+109,Premium Herbal Powder x1 week,125.00,2,70
+110,Premium Herbal Powder x2 week,240.00,2,70
+111,Herbal Med 1,10.00,3,10
+112,Herbal Med 2,12.00,3,10
+113,Massage oil,18.00,3,10
+114,wood lock oil ,20.00,3,10
+115,Herbal Patch,2.00,3,10
+116,consultation,0.00,4,50
+117,acupuncture30,35.00,1,70
+118,acupuncture60,45.00,1,70
+119,acupuncture+acupressure+cupping45,45.00,1,70
+120,acupuncture+acupressure+cupping60,55.00,1,75
+121,cupping therapy,15.00,1,50
+122,ear candling,20.00,1,50
+123,head/shoulder massage,15.00,1,60
+124,allergy test standard 150,45.00,1,0
+125,allergy test digestion 300,80.00,1,0
+126,allergy test comprehensive 500,125.00,1,0

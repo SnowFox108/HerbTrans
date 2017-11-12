@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\OutputType.cs" />
     <Compile Include="Enums\ProductCategory.cs" />
     <Compile Include="Files\DayRateParser.cs" />
     <Compile Include="Files\DayRateReader.cs" />
