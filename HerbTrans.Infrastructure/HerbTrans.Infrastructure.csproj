@@ -51,6 +51,7 @@
     <Compile Include="Files\IParser.cs" />
     <Compile Include="Files\PriceParser.cs" />
     <Compile Include="Files\PriceReader.cs" />
+    <Compile Include="Files\RandomContext.cs" />
     <Compile Include="Models\DailyRecord.cs" />
     <Compile Include="Models\SalesRecord.cs" />
     <Compile Include="Models\CategoryRate.cs" />

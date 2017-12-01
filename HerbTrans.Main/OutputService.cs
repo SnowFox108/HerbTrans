@@ -18,7 +18,7 @@ namespace HerbTrans.Main
 
         public void WriteToFile(IEnumerable<DailyRecord> dailyRecords, string file)
         {
-            var rand = new Random(DateTime.Now.Millisecond);
+            var rand = RandomContext.Instance.RandomNumber;
             StringBuilder stringBuilder = new StringBuilder();
 
             foreach (var dailyRecord in dailyRecords)

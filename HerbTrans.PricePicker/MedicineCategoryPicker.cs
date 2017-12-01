@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Castle.Core.Logging;
 using HerbTrans.Infrastructure.Enums;
+using HerbTrans.Infrastructure.Files;
 using HerbTrans.Infrastructure.Models;
 
 namespace HerbTrans.PricePicker
@@ -19,7 +20,7 @@ namespace HerbTrans.PricePicker
 
         public void Build(SalesRecord salesRecord, IEnumerable<Price> prices, decimal subTotal, int batchId)
         {
-            var rand = new Random(DateTime.Now.Millisecond);
+            var rand = RandomContext.Instance.RandomNumber;
             var remaining = subTotal;
             var subPrices = prices.Where(p => p.Category == Category).ToArray();
 
